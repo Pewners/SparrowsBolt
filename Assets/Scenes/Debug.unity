@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77126453}
   m_LocalRotation: {x: -0.2602914, y: -0.03359095, z: 0.2624889, w: 0.9285579}
-  m_LocalPosition: {x: -0.2, y: 1.9, z: -1.6}
+  m_LocalPosition: {x: -0.55, y: 2.75, z: 1}
   m_LocalScale: {x: 8.479835, y: 8.163526, z: 8.525865}
   m_Children: []
   m_Father: {fileID: 543450653385902273}
@@ -515,7 +515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786438947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4299128, y: 2.3574119, z: -0.9517515}
+  m_LocalPosition: {x: -0.4299128, y: 1.88, z: -0.9517515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -867,15 +867,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3233776891740191985, guid: 727b522d519222f4895b81ab9177d94b, type: 3}
-  shootForce: 300
+  shootForce: 150
   upwardForce: 0
-  timeBetweenShooting: 0.1
-  spread: 3
-  reloadTime: 1.5
-  timeBetweenShots: 0
+  timeBetweenShooting: 1
+  spread: 10
+  reloadTime: 0
+  timeBetweenShots: 1
   magazineSize: 100
   bulletsPerTap: 1
-  allowButtonHold: 1
+  allowButtonHold: 0
   fpsCam: {fileID: 963194227}
   attackPoint: {fileID: 77126454}
   allowInvoke: 1
