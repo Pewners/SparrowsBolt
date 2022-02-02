@@ -48,6 +48,7 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
+
         //myAnim.SetBool("isOnGround", isOnGround);
 
         if (isOnGround == true && Input.GetKeyDown(KeyCode.Space))
