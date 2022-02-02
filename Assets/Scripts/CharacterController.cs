@@ -10,6 +10,11 @@ public class CharacterController : MonoBehaviour
 	public float maxSprint = 5.0f;
 	public float sprintTimer;
 
+    public int maxHealth = 3;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     float rotation = 0.0f;
     float camRotation = 0.0f;
     float rotationSpeed = 2.0f;
@@ -34,6 +39,9 @@ public class CharacterController : MonoBehaviour
 		
 		cam = GameObject.Find("Main Camera");
         myRigidBody = GetComponent<Rigidbody>();
+
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     
@@ -60,6 +68,18 @@ public class CharacterController : MonoBehaviour
 				sprintTimer = sprintTimer + Time.deltaTime;
 			}
 		}
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(1);
+        }
+
+        void TakeDamage(int damage)
+        {
+            currentHealth -= damage;
+
+            healthBar.SetHealth(currentHealth);
+        }
 
 		sprintTimer = Mathf.Clamp(sprintTimer, 0.0f, maxSprint);
 
