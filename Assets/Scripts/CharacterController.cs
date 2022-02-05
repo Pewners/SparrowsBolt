@@ -70,10 +70,10 @@ public class CharacterController : MonoBehaviour
 			}
 		}
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(1);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TakeDamage(1);
+        //}
 
         void TakeDamage(int damage)
         {
@@ -82,7 +82,7 @@ public class CharacterController : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
 
-		sprintTimer = Mathf.Clamp(sprintTimer, 0.0f, maxSprint);
+        sprintTimer = Mathf.Clamp(sprintTimer, 0.0f, maxSprint);
 
         Vector3 newVelocity = (transform.forward * Input.GetAxis("Vertical") * maxSpeed + (transform.right * Input.GetAxis ("Horizontal") * maxSpeed));
         myRigidBody.velocity = new Vector3(newVelocity.x, myRigidBody.velocity.y, newVelocity.z);
@@ -94,5 +94,15 @@ public class CharacterController : MonoBehaviour
 
         camRotation = camRotation + Input.GetAxis("Mouse Y") * camRotationSpeed;
         cam.transform.localRotation = Quaternion.Euler(new Vector3(-camRotation, 0.0f, 0.0f));
+    }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("WhatIsEnemy"))
+        {
+            currentHealth -= 1;
+
+            healthBar.SetHealth(currentHealth);
+        }
     }
 }
