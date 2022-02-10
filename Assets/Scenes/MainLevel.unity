@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.676223, g: 0.5839537, b: 0.4532162, a: 1}
+  m_IndirectSpecularColor: {r: 0.67622423, g: 0.58395517, b: 0.45321727, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237411533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03974304, y: -0.994, z: 0.003}
+  m_LocalPosition: {x: 0.0011, y: -1.0058, z: 0.003}
   m_LocalScale: {x: 0.04042652, y: 0.04042652, z: 0.04042652}
   m_Children: []
   m_Father: {fileID: 934405357}
@@ -1662,7 +1662,7 @@ MonoBehaviour:
   maxSpeed: 10
   normalSpeed: 30
   sprintSpeed: 60
-  maxSprint: 60
+  maxSprint: 3
   sprintTimer: 0
   maxHealth: 3
   currentHealth: 0
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  jumpForce: 250
+  jumpForce: 500
 --- !u!54 &934405359
 Rigidbody:
   m_ObjectHideFlags: 0
