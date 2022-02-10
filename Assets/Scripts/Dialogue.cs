@@ -28,11 +28,17 @@ public class Dialogue : MonoBehaviour
             {
                 NextLine();
             }
+
+            if (textComponent.text == lines[index])
+            {
+                SceneManager.LoadScene(3);
+            }
+
             else
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
-                SceneManager.LoadScene(3);
+                
             }
         }
     }
