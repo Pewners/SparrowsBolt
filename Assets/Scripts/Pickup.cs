@@ -2,23 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
-    private int score;
+    ScoreManager sm;
+
+    void Start() {
+        sm = FindObjectOfType<ScoreManager>();
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
-        //insert code that adds to counter
+        sm.score++;
         Destroy(gameObject);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (score > 3)
-        {
-            SceneManager.LoadScene(4);
-        }
-    }
 }
